@@ -1,10 +1,28 @@
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    // console.log(props);
+
+    props.searchYouTube({
+      query: 'puppies',
+      max: 5, 
+      key: window.YOUTUBE_API_KEY,
+    }, this.updatePlayer.bind(this));
+
     this.state = {
-      videos: props.videos,
-      video: props.videos[0]
+      videos: window.exampleVideoData,
+      video: window.exampleVideoData[0]
     };
+  }
+
+  updatePlayer(data) {
+    console.log(this);
+    console.log(data);
+    this.setState({
+      videos: data,
+      video: data[0]
+    });
   }
 
   onVideoClick(video) {
