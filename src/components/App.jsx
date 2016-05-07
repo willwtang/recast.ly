@@ -2,6 +2,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
+    this.debounced = _.debounce((query) => {
+      this.props.searchYouTube({
+        query: query,
+        max: 5, 
+        key: window.YOUTUBE_API_KEY,
+      }, this.updatePlayer.bind(this));
+    }, 500, {
+      leading: true
+    });
+
     this.state = {
       videos: window.exampleVideoData,
       video: window.exampleVideoData[0]
@@ -9,17 +19,10 @@ class App extends React.Component {
   }
 
   componentDidMount(query = 'puppies') {
-    console.log(query);
-    this.props.searchYouTube({
-      query: query,
-      max: 5, 
-      key: window.YOUTUBE_API_KEY,
-    }, this.updatePlayer.bind(this));
+    this.debounced(query);
   }
 
   updatePlayer(data) {
-    // console.log(this);
-    // console.log(data);
     this.setState({
       videos: data,
       video: data[0]
