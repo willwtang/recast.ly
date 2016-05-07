@@ -6,7 +6,7 @@ window.exampleVideoData = [{
   etag: 'abQHWywil_AkNqdqji7_FqiK-u4/Ykxo_CqKu8F8kcm-iNgL332gQTY',
   id: {
     kind: 'youtube#video',
-    videoId: '4ZAEBxGipoA'
+    channelId: '4ZAEBxGipoA'
   },
   snippet: {
     publishedAt: '2015-08-02T20:52:58.000Z',
@@ -38,7 +38,7 @@ window.exampleVideoData = [{
   etag: 'abQHWywil_AkNqdqji7_FqiK-u4/tS3xe6KXEJbntCAmn01SmEuSYxg',
   id: {
     kind: 'youtube#video',
-    videoId: 'mFEoarLnnqM'
+    channelId: 'mFEoarLnnqM'
   },
   snippet: {
     publishedAt: '2014-08-08T21:31:58.000Z',
@@ -70,7 +70,7 @@ window.exampleVideoData = [{
   etag: 'abQHWywil_AkNqdqji7_FqiK-u4/FZYrgJg7qfkv0yfImJPujBKBmLk',
   id: {
     kind: 'youtube#video',
-    videoId: '0ByoQm-vnYw'
+    channelId: '0ByoQm-vnYw'
   },
   snippet: {
     publishedAt: '2015-12-08T20:51:18.000Z',
@@ -102,7 +102,7 @@ window.exampleVideoData = [{
   etag: 'abQHWywil_AkNqdqji7_FqiK-u4/nSaavPWVkTWpn2p-ClwNj7xszf8',
   id: {
     kind: 'youtube#video',
-    videoId: 'o5E894TmHJg'
+    channelId: 'o5E894TmHJg'
   },
   snippet: {
     publishedAt: '2015-03-09T08:19:59.000Z',
@@ -134,7 +134,7 @@ window.exampleVideoData = [{
   etag: 'abQHWywil_AkNqdqji7_FqiK-u4/3E7u1VZ18KYyfLIA6RgI2w-7nRI',
   id: {
     kind: 'youtube#video',
-    videoId: 'Pd6Ub7Ju2RM'
+    channelId: 'Pd6Ub7Ju2RM'
   },
   snippet: {
     publishedAt: '2015-02-13T18:50:38.000Z',
