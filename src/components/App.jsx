@@ -8,7 +8,9 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount(event) {
+    console.log(event);
+
     this.props.searchYouTube({
       query: 'puppies',
       max: 5, 
@@ -17,8 +19,8 @@ class App extends React.Component {
   }
 
   updatePlayer(data) {
-    console.log(this);
-    console.log(data);
+    // console.log(this);
+    // console.log(data);
     this.setState({
       videos: data,
       video: data[0]
@@ -35,7 +37,7 @@ class App extends React.Component {
     if (this.state.videos && this.state.video) {
       return (
         <div>
-          <Nav />
+          <Nav callback={this.componentDidMount} />
           <div className="col-md-7">
             <VideoPlayer video={this.state.video} />
           </div>
