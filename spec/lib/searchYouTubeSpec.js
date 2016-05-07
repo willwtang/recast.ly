@@ -11,15 +11,19 @@ var getURLSearchParams = function(url) {
 
 var hasSameShape = function(objectOne, objectTwo) {
   if (Object.keys(objectOne).length !== Object.keys(objectTwo).length) {
+    console.log('FALSE lengths');
     return false;
   }
 
   for (var key in objectOne) {
+    console.log('FALSE 2');
+    console.log(key);
     if (!key in objectTwo) {
       return false;
     }
 
     if (typeof objectOne[key] !== typeof objectTwo[key]) {
+      console.log('FALSE 3');
       return false;
     }
 
@@ -78,6 +82,7 @@ describe('searchYouTube', function() {
 
     searchYouTube(options, (data) => {
       console.log(data);
+      console.log(exampleVideoData);
       expect(hasSameShape(data, window.exampleVideoData)).to.be.true;
       done();
     });

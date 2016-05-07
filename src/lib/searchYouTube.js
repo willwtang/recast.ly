@@ -8,7 +8,7 @@ var searchYouTube = (options, callback) => {
       key: options.key,
       part: 'snippet'
     },
-    success: callback
+    success: (data) => callback(data.items)
   });
 };
 
