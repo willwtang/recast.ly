@@ -8,11 +8,10 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount(event) {
-    console.log(event);
-
+  componentDidMount(query = 'puppies') {
+    console.log(query);
     this.props.searchYouTube({
-      query: 'puppies',
+      query: query,
       max: 5, 
       key: window.YOUTUBE_API_KEY,
     }, this.updatePlayer.bind(this));
@@ -37,7 +36,7 @@ class App extends React.Component {
     if (this.state.videos && this.state.video) {
       return (
         <div>
-          <Nav callback={this.componentDidMount} />
+          <Nav callback={this.componentDidMount.bind(this)} />
           <div className="col-md-7">
             <VideoPlayer video={this.state.video} />
           </div>
