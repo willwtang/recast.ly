@@ -3,8 +3,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      videos: null,
-      video: null
+      videos: window.exampleVideoData,
+      video: window.exampleVideoData[0]
     };
   }
 
@@ -46,7 +46,7 @@ class App extends React.Component {
       );
     } else {
       return (
-        <div class="loading">Loading...</div>
+        <div className="loading">Loading...</div>
       );
     }
   }
